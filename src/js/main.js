@@ -59,7 +59,7 @@ function initMap() {
         position: markerCenter,
         map: myMap,
         title: 'Visit our office',
-        icon: 'https://raw.githubusercontent.com/Starmarin/Monticello/e75140126b092c04d0309223df6279ed580be0ec/marker.svg'
+        icon: 'https://raw.githubusercontent.com/Starmarin/exam__Monticello/master/Pin.png'
     });
 }
 initMap();
