@@ -1,44 +1,77 @@
 const mapAPI = 'AIzaSyB-51rZ0eFYnrjZ0li2Q_SIc6zJFSbff5E';
 $(document).ready(function () {
-    $(".menu-btn").click(function () {
-        $(".nav__menu").toggleClass("open");
-        $(".menu-btn").toggleClass("open-btn");
-
+    $("a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            let hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+                window.location.hash = hash;
+            });
+        }
     });
-    $('.slider1').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        vertical: true,
-        arrows: false,
+});
 
-    });
-    $('.slider2').slick({
-        dots: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        responsive: [
-            {
-                breakpoint: 1025,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 570,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: false,
-                }
+$(".form__btn").click(function () {
+    let value = $('input').val();
+    if (value == '') {
+        alert("Enter Email")
+    } else {
+        $(this).text(function (i, text) {
+            return text === "RETURN FORM" ? "SUBMIT" : "RETURN FORM";
+        });
+        $("input").toggleClass("close");
+    }
+});
+$(".menu-btn").click(function () {
+    $(".nav__menu").toggleClass("open");
+    $(".menu-btn").toggleClass("open-btn");
+
+});
+$(".about__btn").click(function () {
+    $(this).toggleClass("close");
+
+});
+$(".gallery__btn").click(function () {
+    $(".gallery__main").clone().appendTo(".gallery>.container");
+    $(this).toggleClass("close");
+
+});
+
+$('.slider1').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    vertical: true,
+    arrows: false,
+
+});
+$('.slider2').slick({
+    dots: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    responsive: [
+        {
+            breakpoint: 1025,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
             }
-        ]
-    });
+        },
+        {
+            breakpoint: 570,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+            }
+        }
+    ]
 });
 function initMap() {
 

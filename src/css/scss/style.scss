@@ -1,4 +1,5 @@
 @import "vars";
+@import "common";
 @import "header";
 @import "about";
 @import "news";
@@ -6,7 +7,7 @@
 @import "map";
 @import "contact";
 @import "footer";
-@import "common";
+@import "media";
 
 html {
     font-size: 10px;
