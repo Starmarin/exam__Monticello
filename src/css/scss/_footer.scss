@@ -1,0 +1,32 @@
+.footer {
+    background: linear-gradient(55deg, rgb(85, 183, 255) 0%, #962cff 100%), url(./img/bg-footer.png) no-repeat center;
+    background-size: cover;
+    padding-bottom: 10rem;
+}
+
+.footer-box {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.social__list {
+    display: flex;
+}
+
+.footer__copyrights {
+    color: white;
+    font-family: $GothamBook;
+    font-size: 1.4rem;
+    margin-top: 4rem;
+}
+
+.copyrights-text span {
+    margin: 0 2rem;
+    opacity: 0.6;
+}

@@ -1,0 +1,22 @@
+@import "vars";
+@import "header";
+@import "about";
+@import "news";
+@import "gallery";
+@import "map";
+@import "contact";
+@import "footer";
+@import "common";
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,131 @@
+.news {
+    padding-top: 14rem;
+    padding-bottom: 20rem;
+    overflow: hidden;
+
+    .slick-initialized .slick-slide {
+        background-color: white;
+        max-width: 37rem;
+        margin-left: 3rem;
+        overflow: hidden;
+        max-height: 52rem;
+
+
+    }
+
+    .slid:hover {
+        transform: scale(1.1);
+    }
+
+    .slick-arrow {
+        font-size: 0;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        background-color: transparent;
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        outline: none;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-right: 1px solid #fff;
+        border-top: 1px solid #fff;
+        position: absolute;
+        top: 45%;
+        left: 45%;
+
+    }
+
+    .slick-prev {
+        left: -5rem;
+    }
+
+    .slick-prev::before {
+        transform: rotate(-135deg);
+    }
+
+    .slick-next {
+        right: -5rem;
+    }
+
+    .slick-next::before {
+        transform: rotate(45deg);
+        left: 35%;
+    }
+
+    .news__title {
+        color: white;
+        padding-bottom: 10rem;
+    }
+
+    .news__title:before {
+        content: '';
+        position: absolute;
+        width: 10rem;
+        height: 1px;
+        top: -4rem;
+        left: 45%;
+        background-color: white;
+    }
+
+
+
+    .news__img {
+        min-width: 100%;
+
+        .news__image {
+            min-width: 100%;
+        }
+    }
+
+    .news__box {
+        padding: 2.5rem;
+
+        .news__box-title {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            font-family: $GothamBold;
+            font-weight: bold;
+            color: $text-color;
+            margin-bottom: 2rem;
+        }
+
+        .news__text {
+            word-spacing: 1px;
+            margin-bottom: 3.5rem;
+        }
+
+        .news__footer {
+            display: flex;
+            gap: 2rem;
+
+        }
+    }
+}
+
+.news__name {
+    font-family: $GothamBold;
+    text-transform: uppercase;
+    color: $text-color;
+    font-size: 2.2rem;
+}
+
+.news__date {
+    font-family: $GothamBold;
+    font-size: 1.4rem;
+    color: $link-color;
+}
+
+.slider2 {
+    .slick-dots {
+        bottom: -6rem;
+    }
+}

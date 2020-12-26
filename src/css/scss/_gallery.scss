@@ -1,0 +1,49 @@
+.gallery {
+    padding-top: 17rem;
+
+    .container {
+        text-align: center;
+    }
+}
+
+.gallery__title {
+    margin-bottom: 10rem;
+}
+
+.gallery__main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 6rem;
+}
+
+.big-photo {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: relative;
+}
+
+.big-photo::after {
+    content: url(./img/360.png);
+    position: absolute;
+    top: 45%;
+    left: 45%;
+
+}
+
+.gallery__img {
+    img {
+        object-fit: cover;
+        min-height: 100%;
+
+    }
+
+    overflow: hidden;
+}
+
+.gallery__btn {
+    min-width: 19rem;
+    margin: 0 auto;
+    margin-bottom: 12rem;
+}
